@@ -25,7 +25,7 @@ def convert_html_to_pdf(html_string):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return jsonify({"Choo Choo": "Welcome to the Flask app 🚅"})
 
 @app.route('/submit', methods=['POST'])
 def submit():
