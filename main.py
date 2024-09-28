@@ -20,7 +20,7 @@ db = mongo_client['your_database_name']  # Replace with your database name
 pdf_collection = db['pdf_files']  # Collection to store PDF files
 
 def convert_html_to_pdf(html_string):
-    pdf_file = pisa.CreatePDF(html_string)
+    pdf_file = pisa.CreatePDF(html_string, encoding='UTF-8', dest=None)
     return pdf_file.dest.getvalue()
 
 @app.route('/')
